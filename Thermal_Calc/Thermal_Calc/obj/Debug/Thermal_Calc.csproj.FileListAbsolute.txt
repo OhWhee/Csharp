@@ -1,0 +1,14 @@
+c:\users\ohwhee\documents\visual studio 2017\Projects\Thermal_Calc\Thermal_Calc\bin\Debug\Thermal_Calc.exe.config
+c:\users\ohwhee\documents\visual studio 2017\Projects\Thermal_Calc\Thermal_Calc\bin\Debug\Thermal_Calc.exe
+c:\users\ohwhee\documents\visual studio 2017\Projects\Thermal_Calc\Thermal_Calc\bin\Debug\Thermal_Calc.pdb
+c:\users\ohwhee\documents\visual studio 2017\Projects\Thermal_Calc\Thermal_Calc\obj\Debug\Thermal_Calc.csprojResolveAssemblyReference.cache
+c:\users\ohwhee\documents\visual studio 2017\Projects\Thermal_Calc\Thermal_Calc\obj\Debug\Thermal_Calc.Form1.resources
+c:\users\ohwhee\documents\visual studio 2017\Projects\Thermal_Calc\Thermal_Calc\obj\Debug\Thermal_Calc.Properties.Resources.resources
+c:\users\ohwhee\documents\visual studio 2017\Projects\Thermal_Calc\Thermal_Calc\obj\Debug\Thermal_Calc.csproj.GenerateResource.Cache
+c:\users\ohwhee\documents\visual studio 2017\Projects\Thermal_Calc\Thermal_Calc\obj\Debug\Thermal_Calc.exe
+c:\users\ohwhee\documents\visual studio 2017\Projects\Thermal_Calc\Thermal_Calc\obj\Debug\Thermal_Calc.pdb
+C:\Users\OhWhee\Documents\Visual Studio 2017\Projects\Thermal_Calc\Thermal_Calc\bin\Debug\Database1.mdf
+C:\Users\OhWhee\Documents\Visual Studio 2017\Projects\Thermal_Calc\Thermal_Calc\bin\Debug\Database1_log.ldf
+C:\Users\OhWhee\documents\visual studio 2017\Projects\Thermal_Calc\Thermal_Calc\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\OhWhee\documents\visual studio 2017\Projects\Thermal_Calc\Thermal_Calc\bin\Debug\RU\System.Data.SqlServerCe.resources.dll
+C:\Users\OhWhee\documents\visual studio 2017\Projects\Thermal_Calc\Thermal_Calc\obj\Debug\Thermal_Calc.csproj.CoreCompileInputs.cache

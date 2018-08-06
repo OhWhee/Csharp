@@ -1,0 +1,10 @@
+c:\users\ohwhee\documents\visual studio 2017\Projects\bdsm\bdsm\bin\Debug\bdsm.exe.config
+c:\users\ohwhee\documents\visual studio 2017\Projects\bdsm\bdsm\bin\Debug\bdsm.exe
+c:\users\ohwhee\documents\visual studio 2017\Projects\bdsm\bdsm\bin\Debug\bdsm.pdb
+c:\users\ohwhee\documents\visual studio 2017\Projects\bdsm\bdsm\obj\Debug\bdsm.csprojResolveAssemblyReference.cache
+c:\users\ohwhee\documents\visual studio 2017\Projects\bdsm\bdsm\obj\Debug\bdsm.Form1.resources
+c:\users\ohwhee\documents\visual studio 2017\Projects\bdsm\bdsm\obj\Debug\bdsm.Properties.Resources.resources
+c:\users\ohwhee\documents\visual studio 2017\Projects\bdsm\bdsm\obj\Debug\bdsm.csproj.GenerateResource.Cache
+c:\users\ohwhee\documents\visual studio 2017\Projects\bdsm\bdsm\obj\Debug\bdsm.exe
+c:\users\ohwhee\documents\visual studio 2017\Projects\bdsm\bdsm\obj\Debug\bdsm.pdb
+C:\Users\OhWhee\documents\visual studio 2017\Projects\bdsm\bdsm\obj\Debug\bdsm.csproj.CoreCompileInputs.cache

@@ -1,0 +1,10 @@
+C:\Users\OhWhee\documents\visual studio 2017\Projects\FinMon\FinMon\bin\Release\FinMon.exe.config
+C:\Users\OhWhee\documents\visual studio 2017\Projects\FinMon\FinMon\bin\Release\FinMon.exe
+C:\Users\OhWhee\documents\visual studio 2017\Projects\FinMon\FinMon\bin\Release\FinMon.pdb
+C:\Users\OhWhee\documents\visual studio 2017\Projects\FinMon\FinMon\obj\Release\FinMon.FinMon.resources
+C:\Users\OhWhee\documents\visual studio 2017\Projects\FinMon\FinMon\obj\Release\FinMon.Properties.Resources.resources
+C:\Users\OhWhee\documents\visual studio 2017\Projects\FinMon\FinMon\obj\Release\FinMon.csproj.GenerateResource.Cache
+C:\Users\OhWhee\documents\visual studio 2017\Projects\FinMon\FinMon\obj\Release\FinMon.exe
+C:\Users\OhWhee\documents\visual studio 2017\Projects\FinMon\FinMon\obj\Release\FinMon.pdb
+C:\Users\OhWhee\documents\visual studio 2017\Projects\FinMon\FinMon\obj\Release\FinMon.csprojResolveAssemblyReference.cache
+C:\Users\OhWhee\documents\visual studio 2017\Projects\FinMon\FinMon\obj\Release\FinMon.csproj.CoreCompileInputs.cache

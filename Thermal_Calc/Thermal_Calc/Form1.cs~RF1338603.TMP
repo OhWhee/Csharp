@@ -1,0 +1,212 @@
+﻿using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+
+namespace Thermal_Calc
+{
+
+    public partial class Form1 : Form
+    {
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\OhWhee\documents\visual studio 2017\Projects\Thermal_Calc\Thermal_Calc\Database1.mdf;Integrated Security=True");
+        SqlCommand cmd;
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        double t1_podacha;
+        double t2_obratka;
+        double t_napor;
+        double t_house;
+        double t_air;
+        double t_zima;
+        double count_sec;
+        double s_sec;
+        double d_pipe;
+        double l_pipe;
+        double f_rad;
+        double q_rad;
+        double q_tr;
+        double q_max;
+        double q_heat_loss;
+        double q_avg;
+        double q_day;
+
+
+      private void button1_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                t1_podacha = Convert.ToDouble(textBox4.Text);
+                t2_obratka = Convert.ToDouble(textBox5.Text);
+                t_house = Int32.Parse(textBox3.Text);
+                s_sec = Convert.ToDouble(textBox7.Text);
+                count_sec = Convert.ToDouble(textBox6.Text);
+                l_pipe = Convert.ToDouble(textBox9.Text);
+                t_air = Int32.Parse(textBox1.Text);
+                t_zima = Double.Parse(textBox2.Text);
+            }
+            catch { }
+            t_napor = t1_podacha / 2 + t2_obratka / 2 - t_house;
+            label12.Text = t_napor.ToString();
+
+            f_rad = s_sec * count_sec;
+            label14.Text = "Fрад = " + count_sec + " *" + s_sec + " =" + f_rad + "экм"; //Поверхность установленных приборов отопления:
+
+            q_rad = Math.Round(f_rad * 435);
+            label17.Text = "Qрад = 435 " + "х " + f_rad + " = " + q_rad + " ккал/час";
+
+            q_tr = Math.Round(q_heat_loss * t_napor * l_pipe);
+            label20.Text = "Qтр = "+ q_heat_loss + l_pipe + "x" + t_napor + "=" + q_tr;
+
+            q_max = q_rad + q_tr;
+            label21.Text = "Qmax = Qпр + Qтр = " + q_rad + " + " + q_tr + " = " + q_max + "ккал/час(" + q_max / 100000 + "Гкал/час)";
+
+            q_avg = Math.Round(q_max / ((t_house - t_air) / (t_house - t_zima)));
+            label23.Text = q_max + "/" + "(" + t_house + "-" + "(" + t_air + "))" + "/" + "(" + t_house + "-" + "(" + t_zima + "))" + "=" + q_avg + "(" + q_avg / 100000 + ")"; //        7238/((18-(-22))/(18-(-0,6)))
+
+            q_day = q_avg * 24;
+            label34.Text = q_avg + "x" + 24 + "=" + q_day;
+            
+
+
+
+
+
+
+
+
+
+
+            logBox.Text = string.Concat(t_air, Environment.NewLine, t_zima, Environment.NewLine, q_avg);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            d_pipe = Convert.ToDouble(comboBox1.Text);
+            if (d_pipe == 15)
+                q_heat_loss = 0.78;
+            else if (d_pipe == 20)
+                q_heat_loss = 0.97;
+            else if (d_pipe == 25)
+                q_heat_loss = 1.22;
+            
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            int users, hrs, gvs_count, usage_hrs;
+
+            users = Int32.Parse(textBox8.Text);
+            hrs = Int32.Parse(textBox9.Text);
+            gvs_count = Int32.Parse(textBox11.Text);
+            usage_hrs = Int32.Parse(textBox10.Text);
+
+            decimal gvs_q_day, gvs_q_hr, Q_q_day, Q_q_hr;
+
+            gvs_q_day = Decimal.Parse(textBox12.Text);
+            gvs_q_hr = Decimal.Parse(textBox13.Text);
+            Q_q_day = Decimal.Parse(textBox14.Text);
+            Q_q_hr = Decimal.Parse(textBox15.Text);
+
+            decimal alpha = 0;
+            decimal p, phr, Nphr, gvs_max_hr, gvs_avg_hr, gvs_avg_day, Q_gvs_max_hr_kvt, Q_gvs_max_hr_cal, Q_gvs_max_hr_kcal, Q_gvs_avg_hr_kvt, Q_gvs_avg_hr_cal, Q_gvs_avg_hr_kcal;
+            p = Math.Round((gvs_q_hr * users) / (Q_q_day * gvs_count * 3600), 3, MidpointRounding.AwayFromZero);
+
+
+            phr = Math.Round((3600 * p * Q_q_day) / Q_q_hr, 3, MidpointRounding.AwayFromZero);
+            Nphr = Math.Round(Int32.Parse(textBox11.Text) * phr, 2, MidpointRounding.AwayFromZero);
+
+
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = (String.Format("SELECT AlphaVal FROM AlphaTable WHERE N = {0}", Nphr.ToString().Replace(',', '.')));
+            cmd.ExecuteNonQuery();
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                alpha = Decimal.Parse(dr["AlphaVal"].ToString());
+                   
+            }
+            con.Close();
+
+            textBox16.Text = alpha.ToString();
+
+                gvs_max_hr = Math.Round((decimal)0.005 * Q_q_hr * alpha, 3, MidpointRounding.AwayFromZero);
+                gvs_avg_hr = Math.Round((gvs_q_day * users) / (1000 * usage_hrs), 3, MidpointRounding.AwayFromZero);
+                gvs_avg_day = Math.Round((gvs_q_day * users) / 1000, 3, MidpointRounding.AwayFromZero);
+                Q_gvs_max_hr_kvt = Math.Round((decimal)1.16 * gvs_max_hr * ((decimal)t2_obratka - 5), 1, MidpointRounding.AwayFromZero);
+                Q_gvs_max_hr_cal = Math.Round(Q_gvs_max_hr_kvt * (decimal)860.4206);
+                Q_gvs_max_hr_kcal = Q_gvs_max_hr_cal / (decimal)1000000.0;
+            Q_gvs_avg_hr_kvt = 
+
+
+            MessageBox.Show(Q_gvs_max_hr_kcal.ToString());
+            
+                gvsBox.Text = string.Concat(p, Environment.NewLine, phr, Environment.NewLine, Nphr, Environment.NewLine, alpha, Environment.NewLine, gvs_max_hr);
+
+        }
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            comboBox2.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT Type FROM Spisok";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                comboBox2.Items.Add(dr["Type"].ToString());
+            }
+
+          con.Close();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmd = new SqlCommand("SELECT * FROM Spisok WHERE Type = N'" + comboBox2.Text + "'", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                string a = dr["A"].ToString();
+                textBox12.Text = a;
+
+                string b = dr["B"].ToString();
+                textBox13.Text = b;
+
+                string c = dr["C"].ToString();
+                textBox14.Text = c;
+
+                string d = dr["D"].ToString();
+                textBox15.Text = d;
+
+                string izmeritel = (string)dr["Who"].ToString();
+                label25.Text = "Измеритель из расчета на:" + izmeritel;
+               
+             
+            }
+
+            con.Close();
+        }
+
+    }
+
+}
+

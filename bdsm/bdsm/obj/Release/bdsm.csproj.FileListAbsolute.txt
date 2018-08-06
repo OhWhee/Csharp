@@ -1,0 +1,9 @@
+C:\Users\OhWhee\Documents\Visual Studio 2017\Projects\bdsm\bdsm\bin\Release\bdsm.exe.config
+C:\Users\OhWhee\Documents\Visual Studio 2017\Projects\bdsm\bdsm\bin\Release\bdsm.exe
+C:\Users\OhWhee\Documents\Visual Studio 2017\Projects\bdsm\bdsm\bin\Release\bdsm.pdb
+C:\Users\OhWhee\Documents\Visual Studio 2017\Projects\bdsm\bdsm\obj\Release\bdsm.csprojResolveAssemblyReference.cache
+C:\Users\OhWhee\Documents\Visual Studio 2017\Projects\bdsm\bdsm\obj\Release\bdsm.Form1.resources
+C:\Users\OhWhee\Documents\Visual Studio 2017\Projects\bdsm\bdsm\obj\Release\bdsm.Properties.Resources.resources
+C:\Users\OhWhee\Documents\Visual Studio 2017\Projects\bdsm\bdsm\obj\Release\bdsm.csproj.GenerateResource.Cache
+C:\Users\OhWhee\Documents\Visual Studio 2017\Projects\bdsm\bdsm\obj\Release\bdsm.exe
+C:\Users\OhWhee\Documents\Visual Studio 2017\Projects\bdsm\bdsm\obj\Release\bdsm.pdb
