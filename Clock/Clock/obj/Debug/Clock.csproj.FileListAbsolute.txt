@@ -1,0 +1,10 @@
+c:\users\ohwhee\documents\visual studio 2017\Projects\Clock\Clock\bin\Debug\Clock.exe.config
+c:\users\ohwhee\documents\visual studio 2017\Projects\Clock\Clock\bin\Debug\Clock.exe
+c:\users\ohwhee\documents\visual studio 2017\Projects\Clock\Clock\bin\Debug\Clock.pdb
+c:\users\ohwhee\documents\visual studio 2017\Projects\Clock\Clock\obj\Debug\Clock.csprojResolveAssemblyReference.cache
+c:\users\ohwhee\documents\visual studio 2017\Projects\Clock\Clock\obj\Debug\Clock.Form1.resources
+c:\users\ohwhee\documents\visual studio 2017\Projects\Clock\Clock\obj\Debug\Clock.Properties.Resources.resources
+c:\users\ohwhee\documents\visual studio 2017\Projects\Clock\Clock\obj\Debug\Clock.csproj.GenerateResource.Cache
+c:\users\ohwhee\documents\visual studio 2017\Projects\Clock\Clock\obj\Debug\Clock.csproj.CoreCompileInputs.cache
+c:\users\ohwhee\documents\visual studio 2017\Projects\Clock\Clock\obj\Debug\Clock.exe
+c:\users\ohwhee\documents\visual studio 2017\Projects\Clock\Clock\obj\Debug\Clock.pdb
