@@ -1,0 +1,6 @@
+D:\PocketProjectsCSharp\e_maksimenko\Practice Files Task21\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+D:\PocketProjectsCSharp\e_maksimenko\Practice Files Task21\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+D:\PocketProjectsCSharp\e_maksimenko\Practice Files Task21\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+D:\PocketProjectsCSharp\e_maksimenko\Practice Files Task21\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreCompileInputs.cache
+D:\PocketProjectsCSharp\e_maksimenko\Practice Files Task21\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+D:\PocketProjectsCSharp\e_maksimenko\Practice Files Task21\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.pdb

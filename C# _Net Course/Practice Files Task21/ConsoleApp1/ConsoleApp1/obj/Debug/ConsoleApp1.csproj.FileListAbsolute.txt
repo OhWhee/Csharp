@@ -1,0 +1,7 @@
+D:\PocketProjectsCSharp\e_maksimenko\Practice Files Task21\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\PocketProjectsCSharp\e_maksimenko\Practice Files Task21\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\PocketProjectsCSharp\e_maksimenko\Practice Files Task21\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\PocketProjectsCSharp\e_maksimenko\Practice Files Task21\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+D:\PocketProjectsCSharp\e_maksimenko\Practice Files Task21\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\PocketProjectsCSharp\e_maksimenko\Practice Files Task21\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\PocketProjectsCSharp\e_maksimenko\Practice Files Task21\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
